@@ -1,0 +1,7 @@
+{
+  "name": "@team.sultanov/ninja.versioniq",
+  "devDependencies": {
+    "npm-check-updates": "^11.8.5",
+    "ws": "^8.2.3"
+  }
+}
