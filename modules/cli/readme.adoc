@@ -1,0 +1,1 @@
+== team.sultanov/ninja.cli
