@@ -35,15 +35,15 @@
 (defn extract-meta
   [opts]
   (-> opts
-    (select-keys [:lib
-                  :version
-                  :build-number
-                  :build-timestamp
-                  :git-url
-                  :git-branch
-                  :git-sha])
-    (set/rename-keys {:lib :module})
-    (update :module str)))
+      (select-keys [:lib
+                    :version
+                    :build-number
+                    :build-timestamp
+                    :git-url
+                    :git-branch
+                    :git-sha])
+      (set/rename-keys {:lib :module})
+      (update :module str)))
 
 
 (defn write-meta
@@ -51,31 +51,31 @@
   (let [dir (:build-meta-dir opts)]
     (file/ensure-dir dir)
     (->> opts
-      (extract-meta)
-      (pretty-print)
-      (with-out-str)
-      (spit (format "%s/build.edn" dir)))))
+         (extract-meta)
+         (pretty-print)
+         (with-out-str)
+         (spit (format "%s/build.edn" dir)))))
 
 
 (defn outdated
   [opts]
   (-> opts
-    (with-defaults)
-    (bb/run-task [:nop :antq])))
+      (with-defaults)
+      (bb/run-task [:nop :antq])))
 
 
 (defn outdated:upgrade
   [opts]
   (-> opts
-    (with-defaults)
-    (bb/run-task [:nop :antq :antq:upgrade])))
+      (with-defaults)
+      (bb/run-task [:nop :antq :antq:upgrade])))
 
 
 (defn clean
   [opts]
   (-> opts
-    (with-defaults)
-    (bb/clean)))
+      (with-defaults)
+      (bb/clean)))
 
 
 (defn repl
@@ -97,9 +97,9 @@
   (let [opts (with-defaults opts)]
     (write-meta opts)
     (-> opts
-      (assoc :scm {:url (:git-url opts)
-                   :tag (:version opts)})
-      (bb/jar))))
+        (assoc :scm {:url (:git-url opts)
+                     :tag (:version opts)})
+        (bb/jar))))
 
 
 (defn uber
@@ -107,9 +107,9 @@
   (let [opts (with-defaults opts)]
     (write-meta opts)
     (-> opts
-      (assoc :scm {:url (:git-url opts)
-                   :tag (:version opts)})
-      (bb/uber))))
+        (assoc :scm {:url (:git-url opts)
+                     :tag (:version opts)})
+        (bb/uber))))
 
 
 (defn dist
@@ -126,12 +126,12 @@
 (defn install
   [opts]
   (-> opts
-    (with-defaults)
-    (bb/install)))
+      (with-defaults)
+      (bb/install)))
 
 
 (defn deploy
   [opts]
   (-> opts
-    (with-defaults)
-    (bb/deploy)))
+      (with-defaults)
+      (bb/deploy)))
