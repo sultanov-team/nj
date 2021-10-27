@@ -116,7 +116,7 @@
   [opts]
   (let [{:keys [target dist-dir coverage-dir]} (with-defaults opts)]
     (b/delete {:path dist-dir})
-    (b/copy-dir {:src-dirs   [target coverage-dir]
+    (b/copy-dir {:src-dirs   [target]
                  :target-dir dist-dir
                  :include    "*.jar"})
     (b/copy-dir {:src-dirs   [coverage-dir]
