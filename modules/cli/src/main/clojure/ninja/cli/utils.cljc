@@ -3,8 +3,7 @@
   (:require
     #?@(:clj [[clojure.core :as c]]
         :cljs
-        [[goog.object :as gobj]
-         [goog.string :as gstr]
+        [[goog.string :as gstr]
          [goog.string.format]])))
 
 
