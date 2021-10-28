@@ -97,7 +97,7 @@
 
 
 
-(defn prettify
+(defn prettify-errors
   "Prettifies errors in explanation."
   [errors]
   (reduce
@@ -105,7 +105,7 @@
       (cond
         (nil? error) acc
         (map? error) (as-> error $$ (dissoc $$ :malli/error) (vals $$) (into acc $$))
-        (vector? error) (into acc (prettify error))
+        (vector? error) (into acc (prettify-errors error))
         (string? error) (conj acc error)
         :else acc))
     [] errors))
@@ -136,7 +136,7 @@
    (let [errors (-> x
                     (explain)
                     (me/humanize opts)
-                    (prettify)
+                    (prettify-errors)
                     (flatten))]
      (when (seq errors)
        (vec errors)))))
