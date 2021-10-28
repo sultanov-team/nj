@@ -29,7 +29,7 @@
 
 
       (testing "a parsing error is expected"
-        (is (= :cli/invalid (sut/parse-cli nil)))
+        (is (= :ninja.cli/invalid (sut/parse-cli nil)))
         (is (not (sut/valid? (sut/parse-cli nil))))))))
 
 

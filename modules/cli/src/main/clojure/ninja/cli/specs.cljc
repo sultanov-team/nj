@@ -79,7 +79,7 @@
     (fn [cli]
       (let [res (parse cli)]
         (if (= ::m/invalid res)
-          :cli/invalid
+          :ninja.cli/invalid
           res)))))
 
 
