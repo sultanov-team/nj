@@ -58,7 +58,8 @@
 
 
 (def ^{:arglists '([cli])
-       :doc      "Returns a parsed cli.
+       :doc      "Returns a parsed `cli`.
+       Returns `:ninja.cli/invalid` if `cli` is not valid.
 
        Example:
 
@@ -84,7 +85,7 @@
 
 
 (def ^{:arglists '([cli])
-       :doc      "Returns 'true` if the given `cli` is valid. Otherwise, returns 'false'."}
+       :doc      "Returns `true` if the given `cli` is valid. Otherwise, returns `false`."}
   valid?
   (m/validator CLI))
 
