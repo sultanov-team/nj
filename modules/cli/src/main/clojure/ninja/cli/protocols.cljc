@@ -3,6 +3,7 @@
 
 
 (defprotocol CLI
+  :extend-via-metadata true
   (name [cli])
   (options [cli])
   (commands [cli])
@@ -10,4 +11,5 @@
 
 
 (defprotocol CLIBuilder
+  :extend-via-metadata true
   (build [builder cli]))
