@@ -6,26 +6,26 @@
 
 
 (def default-opts
-  {:param/name           {:error/message {:en ":param/name should be a keyword"}}
-   :param/options        {:error/message {:en ":param/options should be a map of {:keyword :any}"}}
-   :param/options-key    {:error/message {:en ":param/options-key should be a keyword"}}
+  {:param/name           {:error/message {:en "`:param/name` should be a keyword"}}
+   :param/options        {:error/message {:en "`:param/options` should be a map of {:keyword :any}"}}
+   :param/options-key    {:error/message {:en "`:param/options-key` should be a keyword"}}
 
-   :argument/name        {:error/message {:en ":argument/name should be a keyword"}}
-   :argument/options     {:error/message {:en ":argument/options should be a map of {:keyword :any}"}}
-   :argument/options-key {:error/message {:en ":argument/options-key should be a keyword"}}
-   :argument/params      {:error/message {:en ":argument/params should be a vector or list"}}
+   :argument/name        {:error/message {:en "`:argument/name` should be a keyword"}}
+   :argument/options     {:error/message {:en "`:argument/options` should be a map of {:keyword :any}"}}
+   :argument/options-key {:error/message {:en "`:argument/options-key` should be a keyword"}}
+   :argument/params      {:error/message {:en "`:argument/params` should be a vector or list"}}
 
-   :command/name         {:error/message {:en ":command/name should be a keyword"}}
-   :command/options      {:error/message {:en ":command/options should be a map of {:keyword :any}"}}
-   :command/options-key  {:error/message {:en ":command/options-key should be a keyword"}}
-   :command/arguments    {:error/message {:en ":command/arguments should be a vector or list"}}
+   :command/name         {:error/message {:en "`:command/name` should be a keyword"}}
+   :command/options      {:error/message {:en "`:command/options` should be a map of {:keyword :any}"}}
+   :command/options-key  {:error/message {:en "`:command/options-key` should be a keyword"}}
+   :command/arguments    {:error/message {:en "`:command/arguments` should be a vector or list"}}
 
-   :cli/name             {:error/message {:en ":cli/name should be a keyword"}}
-   :cli/options          {:error/message {:en ":cli/options should be a map of {:keyword :any}"}}
-   :cli/options-key      {:error/message {:en ":cli/options-key should be a keyword"}}
-   :cli/commands         {:error/message {:en ":cli/commands should be a vector or list"}}
+   :cli/name             {:error/message {:en "`:cli/name` should be a keyword"}}
+   :cli/options          {:error/message {:en "`:cli/options` should be a map of {:keyword :any}"}}
+   :cli/options-key      {:error/message {:en "`:cli/options-key` should be a keyword"}}
+   :cli/commands         {:error/message {:en "`:cli/commands` should be a vector or list"}}
 
-   :cli                  {:error/message {:en ":cli should be a vector or list"}}})
+   :cli                  {:error/message {:en "`:cli` should be a vector or list"}}})
 
 
 
