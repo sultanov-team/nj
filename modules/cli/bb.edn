@@ -31,7 +31,7 @@
                      (def -git-sha (execute "git rev-parse --short HEAD"))
 
                      (def -release? (= "main" -git-branch))
-                     (def -snapshot? (complement -release?))
+                     (def -snapshot? (not -release?))
                      (def -deployable? (contains? #{"main" "develop"} -git-branch))
 
                      (def -version-template (execute "cat version.tmpl"))
