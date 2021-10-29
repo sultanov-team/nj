@@ -5,8 +5,11 @@
 (defprotocol Command
   :extend-via-metadata true
   (name [command])
+  (description [command])
   (options [command])
-  (arguments [command]))
+  (arguments [command])
+  (argument-keys [command])
+  (argument [command name]))
 
 
 (defprotocol CommandBuilder

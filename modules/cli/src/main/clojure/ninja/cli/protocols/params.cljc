@@ -5,7 +5,9 @@
 (defprotocol Param
   :extend-via-metadata true
   (name [param])
-  (options [param]))
+  (description [param])
+  (options [param])
+  (option-keys [param]))
 
 
 (defprotocol ParamBuilder

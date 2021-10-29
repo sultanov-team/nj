@@ -5,8 +5,11 @@
 (defprotocol Argument
   :extend-via-metadata true
   (name [argument])
+  (description [argument])
   (options [argument])
-  (params [argument]))
+  (params [argument])
+  (param-keys [argument])
+  (param [argument name]))
 
 
 (defprotocol ArgumentBuilder
